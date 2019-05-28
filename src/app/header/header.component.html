@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand logo" [routerLink]="['/']">
+    <img src="assets/imgs/logo.png" height="60" alt="logo" />
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li
+        class="nav-item"
+        routerLinkActive="router-link-active"
+        data-toggle="collapse"
+        data-target="#navbarNav.show"
+      >
+        <a class="nav-link" [routerLink]="['/mappa']">{{
+          'header.map' | translate | uppercase
+        }}</a>
+      </li>
+      <li
+        class="nav-item"
+        routerLinkActive="router-link-active"
+        data-toggle="collapse"
+        data-target="#navbarNav.show"
+      >
+        <a class="nav-link" [routerLink]="['/scopri']">{{
+          'header.discover' | translate | uppercase
+        }}</a>
+      </li>
+      <li
+        class="nav-item"
+        routerLinkActive="router-link-active"
+        data-toggle="collapse"
+        data-target="#navbarNav.show"
+      >
+        <a class="nav-link" [routerLink]="['/luoghi']">{{
+          'header.places' | translate | uppercase
+        }}</a>
+      </li>
+      <li
+        class="nav-item"
+        routerLinkActive="router-link-active"
+        data-toggle="collapse"
+        data-target="#navbarNav.show"
+      >
+        <a class="nav-link" [routerLink]="['/other1']">{{
+          'header.other' | translate | uppercase
+        }}</a>
+      </li>
+      <li
+        class="nav-item"
+        routerLinkActive="router-link-active"
+        data-toggle="collapse"
+        data-target="#navbarNav.show"
+      >
+        <a class="nav-link" [routerLink]="['/other2']">{{
+          'header.other' | translate | uppercase
+        }}</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {{ currentLang | uppercase }}
+        </a>
+        <div
+          class="dropdown-menu bg-light"
+          aria-labelledby="navbarDropdown"
+          data-toggle="collapse"
+          data-target="#navbarNav.show"
+        >
+          <a class="dropdown-item" (click)="setLanguage('it')">IT</a>
+          <a class="dropdown-item" (click)="setLanguage('en')">EN</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

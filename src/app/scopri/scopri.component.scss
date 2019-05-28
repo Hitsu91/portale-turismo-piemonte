@@ -1,0 +1,39 @@
+:host {
+  --width: auto;
+  --heigh: 40rem;
+  @media only screen and (max-width: 550px) {
+    --width: 100%;
+    --heigh: auto;
+  }
+}
+
+svg {
+  margin-top: 1rem;
+  width: var(--width);
+  height: var(--heigh);
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+path {
+  stroke: black;
+  fill: #f8f9fa;
+  stroke-width: 3px;
+}
+
+// path:hover {
+// }
+
+a:hover path {
+  fill: var(--info);
+}
+
+a:hover text {
+  fill: white;
+  z-index: 100;
+}
+
+a,
+a * {
+  cursor: pointer;
+}

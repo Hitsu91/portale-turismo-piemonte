@@ -1,0 +1,10 @@
+{
+  "header": {
+    "places": "places",
+    "discover": "discover",
+    "other": "other",
+    "search": "search",
+    "map": "map",
+    "test": "test"
+  }
+}

@@ -1,0 +1,22 @@
+<div class="mt-4"></div>
+<div class="container">
+  <h2>Mappa</h2>
+  <p>Out of service</p>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16">
+    <agm-marker
+      *ngFor="let m of markers"
+      [longitude]="m.lng"
+      [latitude]="m.lat"
+      [label]="m.label"
+      [markerDraggable]="m.draggable"
+      [iconUrl]="m.icon"
+    >
+      <agm-info-window>
+        <h1>Info</h1>
+        <p>{{ m.label }}</p>
+      </agm-info-window>
+    </agm-marker>
+    <agm-direction [origin]="markers[0]" [destination]="markers[1]">
+    </agm-direction>
+  </agm-map>
+</div>

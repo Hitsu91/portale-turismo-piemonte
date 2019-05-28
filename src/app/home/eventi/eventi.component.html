@@ -1,0 +1,21 @@
+<h1 class="text-center">
+  Eventi da non perdere
+</h1>
+<div class="card-group" *ngFor="let eventi of eventiGroup">
+  <div *ngFor="let e of eventi" class="card">
+    <div class="card-img-holder">
+      <img [src]="e.img.src" class="card-img-top" [alt]="e.img.alt" />
+      <div class="date">
+        <div>{{ e.date.day }}</div>
+        <div>{{ e.date.month }}</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ e.title }}</h5>
+      <h6>{{ e.place }}</h6>
+      <p class="card-text">
+        {{ e.content | truncateNews }}
+      </p>
+    </div>
+  </div>
+</div>

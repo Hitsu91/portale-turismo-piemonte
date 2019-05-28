@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+h1,
+h2,
+h3 {
+  font-family: 'Patua One', cursive;
+}
+
+body {
+  border: 1px solid transparent;
+  line-height: 0;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  transform: scale(1.01);
+}
+
+.date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--info);
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  padding: 5px 0;
+  height: 58px;
+  width: 58px;
+}
+
+.card-img-holder {
+  position: relative;
+}
