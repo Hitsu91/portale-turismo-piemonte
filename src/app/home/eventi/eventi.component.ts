@@ -91,6 +91,17 @@ export class EventiComponent implements OnInit {
         primis in faucibus orci luctus et ultrices posuere cubilia Curae;
         Suspendisse nec rutrum ligula, in tincidunt nisl. Etiam cursus ac mi
         vitae imperdiet.`
+      },
+      {
+        img: { src: 'assets/imgs/home/uva_1.jpg', alt: 'uva' },
+        date: { day: 25, month: 'LUG' },
+        title: 'Visita alla cantina sociale',
+        place: 'Vinchio',
+        content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at nisl
+        viverra, tristique nibh sed, aliquam nibh. Vestibulum ante ipsum
+        primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+        Suspendisse nec rutrum ligula, in tincidunt nisl. Etiam cursus ac mi
+        vitae imperdiet.`
       }
     ];
     this.eventiGroup = chunkArray(this.eventi.reverse(), 3).reverse();
@@ -99,7 +110,7 @@ export class EventiComponent implements OnInit {
   ngOnInit() {}
 }
 
-interface Evento {
+export interface Evento {
   img: { src: string; alt: string };
   date: { day: number; month: string };
   title: string;

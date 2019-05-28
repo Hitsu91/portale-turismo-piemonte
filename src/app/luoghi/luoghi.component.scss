@@ -1,3 +1,7 @@
+.container {
+  min-height: calc(100vh - 235px);
+}
+
 svg {
   width: 100%;
 }
@@ -11,24 +15,47 @@ text {
   font-weight: bolder;
 }
 
-.st0 {
+#torino .st0 {
   display: none;
 }
-.st1 {
+#torino .st1 {
   fill: none;
   stroke: #000000;
   stroke-width: 3;
   stroke-miterlimit: 10;
 }
-.st2 {
+#torino .st2 {
   fill: none;
   stroke: #ffffff;
   stroke-width: 3;
   stroke-miterlimit: 10;
 }
-.st3 {
+#torino .st3 {
   fill: none;
   stroke: #ffffff;
   stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+#asti .st0 {
+  stroke: none;
+  stroke-miterlimit: 10;
+}
+#asti .st1 {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+#asti .st2 {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+#asti .st3 {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3;
   stroke-miterlimit: 10;
 }
