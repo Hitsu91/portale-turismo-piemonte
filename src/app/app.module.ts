@@ -23,6 +23,7 @@ import { ConsigliComponent } from './home/consigli/consigli.component';
 import { TruncateNewsPipe } from './pipes/truncate-news.pipe';
 import { MappaComponent } from './mappa/mappa.component';
 import { LuoghiComponent } from './luoghi/luoghi.component';
+import { MappaLeafletComponent } from './mappa-leaflet/mappa-leaflet.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { LuoghiComponent } from './luoghi/luoghi.component';
     PiemonteDaScoprireComponent,
     ConsigliComponent,
     TruncateNewsPipe,
-    LuoghiComponent
+    LuoghiComponent,
+    MappaLeafletComponent
   ],
   imports: [
     BrowserModule,

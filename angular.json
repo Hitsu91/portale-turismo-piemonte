@@ -25,7 +25,9 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/leaflet/leaflet.css",
+              "src/assets/leaflet/leaflet.js"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
