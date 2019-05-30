@@ -24,6 +24,9 @@ import { TruncateNewsPipe } from './pipes/truncate-news.pipe';
 import { MappaComponent } from './mappa/mappa.component';
 import { LuoghiComponent } from './luoghi/luoghi.component';
 import { MappaLeafletComponent } from './mappa-leaflet/mappa-leaflet.component';
+import { ContattaciComponent } from './contattaci/contattaci.component';
+import { LuogoComponent } from './luoghi/luogo/luogo.component';
+import { LuoghiService } from './luoghi/luoghi.service';
 
 @NgModule({
   declarations: [
@@ -41,11 +44,14 @@ import { MappaLeafletComponent } from './mappa-leaflet/mappa-leaflet.component';
     ConsigliComponent,
     TruncateNewsPipe,
     LuoghiComponent,
-    MappaLeafletComponent
+    MappaLeafletComponent,
+    ContattaciComponent,
+    LuogoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDZ4UHeac7QP-7p_oJVr2qpIgkbRDG0gt4'
     }),
@@ -59,7 +65,7 @@ import { MappaLeafletComponent } from './mappa-leaflet/mappa-leaflet.component';
       }
     })
   ],
-  providers: [],
+  providers: [LuoghiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

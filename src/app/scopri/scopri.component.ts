@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./scopri.component.scss']
 })
 export class ScopriComponent implements OnInit {
-  loading = true;
+  changed: boolean;
+  timeout: NodeJS.Timer;
+  currentPlace: string;
 
   descriptions = {
     verbano: { name: 'Verbano Cusio Ossola', description: 'Verbano, Ipsum ts' },
@@ -25,19 +27,28 @@ export class ScopriComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.showDescription('asti');
+    this.changed = true;
+    this.showedDescription = this.descriptions.asti;
+    this.timeout = setTimeout(() => {
+      this.changed = false;
+    }, 300);
   }
 
   showDescription(place: string) {
-    this.showedDescription = this.descriptions[place];
-  }
-
-  onLoad() {
-    console.log('loaded');
+    if (this.currentPlace === place) {
+      return;
+    }
+    clearTimeout(this.timeout);
+    this.changed = true;
+    this.timeout = setTimeout(() => {
+      this.changed = false;
+      this.showedDescription = this.descriptions[place];
+      this.currentPlace = place;
+    }, 300);
   }
 
   getImage(place: string) {
-    return `assets/imgs/scopri/${place}.jpg`;
+    return `assets/imgs/scopri/${place.split(' ').join('-')}.jpg`;
   }
 
   navigate(place: string) {

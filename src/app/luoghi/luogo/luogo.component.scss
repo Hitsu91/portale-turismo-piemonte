@@ -1,0 +1,19 @@
+.icona {
+  height: auto;
+  width: 100%;
+}
+
+.card-group {
+  margin-bottom: 1rem;
+}
+
+.card {
+  margin: 0 1rem;
+}
+
+// margin-buttom card when screen is smaller than 575px
+@media screen and (max-width: 575px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+}

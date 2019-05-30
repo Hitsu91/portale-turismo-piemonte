@@ -1,0 +1,51 @@
+<div class="mt-3"></div>
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Tipologia</label>
+      <select class="form-control" id="exampleFormControlSelect1" required>
+        <option value="">Seleziona una tipologia...</option>
+        <option value="comm">Commerciale</option>
+        <option value="info">Informazioni</option>
+        <option value="altro">Altro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        [placeholder]="emailPlaceholder"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Recapito</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="+39 0141 1234567"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Messaggio</label>
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        placeholder="Messaggio..."
+        rows="10"
+      ></textarea>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-6 text-center pt-2 pb-2">
+        <button type="submit" class="btn btn-block btn-info">Invia</button>
+      </div>
+      <div class="col-md-2 col-6 text-center pt-2 pb-2">
+        <button type="reset" class="btn btn-block btn-danger">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="mb-3"></div>

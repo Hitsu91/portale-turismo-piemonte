@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 h1,
 h2,
 h3 {
@@ -15,7 +19,8 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  // box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  box-shadow: var(--box-shadow);
   transform: scale(1.01);
 }
 

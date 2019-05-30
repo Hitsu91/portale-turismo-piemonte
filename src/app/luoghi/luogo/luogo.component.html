@@ -1,0 +1,82 @@
+<div class="mt-3"></div>
+<div class="container">
+  <h1>{{ title | uppercase }}</h1>
+  <div class="row">
+    <!-- <div class="col-md-5 icona" [style.background-image]="'url(' + 'assets/imgs/asti/1.jpg' + ')'"></div> -->
+    <div class="col-md-5 icona">
+      <img class="icona" [src]="'assets/imgs/asti/1.jpg'" />
+    </div>
+    <div class="col-md-7">
+      <p>
+        Riassunto Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nullam quis tempor urna, suscipit elementum magna. Maecenas molestie
+        augue quis lorem placerat suscipit. Maecenas consectetur eget diam vel
+        rutrum. Fusce blandit feugiat ipsum, eu sollicitudin libero rutrum sit
+        amet. Cras nulla leo, viverra in purus a, blandit blandit erat. Mauris
+        ultrices, urna sit amet placerat placerat, felis risus condimentum
+        ligula, sed aliquam diam lectus nec est. Suspendisse sit amet fringilla
+        orci. Maecenas quis urna ut nunc rhoncus faucibus et in velit. Aenean a
+        diam ac diam porttitor luctus. Praesent commodo sit amet dolor eget
+        feugiat.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="mt-2"></div>
+  <!-- Eventi annuali -->
+  <h2 class="text-center">EVENTI ANNUALI</h2>
+  <div class="card-group" *ngFor="let eventi of eventiGroup">
+    <div *ngFor="let e of eventi" class="card">
+      <div class="card-img-holder">
+        <img [src]="e.img.src" class="card-img-top" [alt]="e.img.alt" />
+        <div class="date">
+          <div>{{ e.date.day }}</div>
+          <div>{{ e.date.month }}</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ e.title }}</h5>
+        <h6>{{ e.place }}</h6>
+        <p class="card-text">
+          {{ e.content | truncateNews }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Informazioni -->
+  <hr />
+  <div class="row">
+    <div class="col text-center">
+      <i
+        class="fas fa-map-marked-alt"
+        style="font-size: 2rem; margin: 10px"
+      ></i>
+      <h6>COME ARRIVARE</h6>
+      <p>Bla bla bla</p>
+      <p>Bla bla bla</p>
+      <p>Bla bla bla</p>
+    </div>
+    <div class="col text-center">
+      <i class="fas fa-bus-alt" style="font-size: 2rem; margin: 10px"></i>
+      <h6>COME MUOVERSI</h6>
+      <p>Bla bla bla</p>
+      <p>Bla bla bla</p>
+      <p>Bla bla bla</p>
+    </div>
+    <div class="col text-center">
+      <i class="fas fa-info" style="font-size: 2rem; margin: 10px"></i>
+      <h6>INFORMAZIONI</h6>
+      <p>Bla bla bla</p>
+      <p>Bla bla bla</p>
+      <p>Bla bla bla</p>
+    </div>
+    <div class="col text-center">
+      <i class="fas fa-phone" style="font-size: 2rem; margin: 10px"></i>
+      <h6>NUMERI UTILI</h6>
+      <p>Bla bla bla</p>
+      <p>Bla bla bla</p>
+      <p>Bla bla bla</p>
+    </div>
+  </div>
+</div>
+<div class="mb-3"></div>
