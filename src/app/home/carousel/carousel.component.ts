@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+interface CarouselItem {
+  url: string;
+  label: string;
+}
+
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-  imagesURL: { url: string; label: string }[] = [
+  imagesURL: CarouselItem[] = [
     {
       url: 'assets/imgs/carousel/1.jpg',
       label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'

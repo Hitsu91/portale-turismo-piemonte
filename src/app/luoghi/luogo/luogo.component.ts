@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Evento, chunkArray } from 'src/app/home/eventi/eventi.component';
+import { Evento, chunkArray } from 'src/app/home/eventi/evento.model';
 
 @Component({
   selector: 'app-luogo',
@@ -46,7 +46,7 @@ export class LuogoComponent implements OnInit {
         primis in faucibus orci luctus et ultrices posuere cubilia Curae;
         Suspendisse nec rutrum ligula, in tincidunt nisl. Etiam cursus ac mi
         vitae imperdiet.`
-      },
+      }
     ];
     this.eventiGroup = chunkArray(this.eventi.reverse(), 3).reverse();
     //
