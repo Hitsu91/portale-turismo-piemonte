@@ -53,7 +53,6 @@ import { ScopriComponent } from './scopri/scopri.component';
       apiKey: 'AIzaSyDZ4UHeac7QP-7p_oJVr2qpIgkbRDG0gt4'
     }),
     AgmDirectionModule,
-    HttpClientModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -65,7 +64,7 @@ import { ScopriComponent } from './scopri/scopri.component';
   providers: [LuoghiService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
